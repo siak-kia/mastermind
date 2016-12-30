@@ -1,16 +1,40 @@
 /**
  * Created by IntelliJ IDEA.
- * User: siavash
- * Date: 13/12/19
-  * copied from original project : Date: 1/11/15
- * Time: 9:34
+
+
  * To change this template use File | Settings | File Templates.
  */
 
-//generateRandomRow();
+var targetRow = generateRandomRow();
 // main program
+var count = 0;
 
-main();
+
+$("#myButton0").click(function () {
+
+    var userRow = getInput(count);
+
+    var ints = giveFeedback(targetRow, userRow);
+    var id = '#result'.concat(String(count));
+    $(id).val(String(ints[0]).concat(" ").concat(ints[1]) );
+    // document.write("black:" + ints[0] + " ");
+    // document.write("white:" + ints[1] + '<br>');
+
+    if (ints[0] == 4) {
+        document.write("you are the winner" + '<br>');
+    }
+
+//        }
+    console.log(count)
+    if (count == 3) {
+
+        for (var j = 0; j < targetRow.length; j++) {
+            document.write(targetRow[j] + " ");
+        }
+    }
+    count++;
+});
+
 
 function main() {
     var count = 0;
@@ -18,33 +42,35 @@ function main() {
     //showArray(targetRow)
     while (count < 10) {
 
-        var userRow = getInput();
-        document.write("getInput is done.");
-        showArray(userRow);
+        var userRow = getInput(count);
+        // document.write("getInput is done.");
+        //showArray(userRow);
 
-      var ints = giveFeedback(targetRow, userRow);
+        // var ints = giveFeedback(targetRow, userRow);
+
+        // document.write("black:" + ints[0] + " ");
+        // document.write("white:" + ints[1] + '<br>');
+        document.write($('#myText').val());
+//         if (ints[0] == 4){
+//             document.write("you are winner" + '<br>');
+//         }
+//         count++;
+// //        }
+//         if (count == 10){
 //
-            document.write("black:" + ints[0] + " ");
-            document.write("white:" + ints[1] + '<br>');
-            if (ints[0] == 4){
-                document.write("you are winner" + '<br>');
-            }
-            count++;
-//        }
-        if (count == 10){
-
-             for( var j = 0; j < targetRow.length ; j++) {
-                document.write(targetRow[j] + " " );
-            }
-        }
+//             for( var j = 0; j < targetRow.length ; j++) {
+//                 document.write(targetRow[j] + " " );
+//             }
+//         }
     }
 }
 
-function getInput() {
+function getInput(index) {
 
-    var answer = prompt("enter your guess", "");
+    //var answer = prompt("enter your guess", "");
     var userInput = new Array();
-
+    var id = '#myText'.concat(String(index));
+    var answer = $(id).val();
 
     var strings = answer.split(" ");
     for (var i = 0; i < strings.length; i++) {
@@ -81,8 +107,8 @@ function giveFeedback(target, input) {
     var result = new Array();
     for (var i = 0; i < tempTarget.length; i++) {
         // document.write(tempTarget[i] + " ");
-            document.write(input[i] + " ");
-        if (tempTarget[i]== input[i]) {
+        // document.write(input[i] + " ");
+        if (tempTarget[i] == input[i]) {
 
 
             black++;
@@ -103,7 +129,7 @@ function giveFeedback(target, input) {
     }
     result[0] = black;
     result[1] = white;
-    return  result;
+    return result;
 }
 function showArray(myArray) {
     //document.writeln("showarray entering");
