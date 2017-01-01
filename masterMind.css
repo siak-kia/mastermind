@@ -1,0 +1,29 @@
+
+.wrap {
+    width: 100%;
+    overflow:auto;
+}
+
+
+.fleft {
+    float:left;
+    width: 50%;
+    background:lightblue;
+    height: 100%;
+}
+
+.board{
+    float:right;
+    width: 50%;
+    background:lightgreen;
+    height:100%;
+
+}
+
+
+
+
+
+
+
+

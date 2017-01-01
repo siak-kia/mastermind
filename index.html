@@ -1,144 +1,194 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>click demo</title>
-    <style>
-        p {
-            color: red;
-            margin: 5px;
-            cursor: pointer;
-        }
-        p:hover {
-            background: yellow;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="masterMind.css"/>
 </head>
 
 <body>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<p> play mastermind game. in the first boxes you have to enter numbers from 0 to 7 separated <br>
-with space in the second box the first number shows the number of correct position and correct guess <br>
-    and the second number shows the correct guess bit in correct position  </p>
-<label>Guess:</label>
-<input type = "text"
-       id = "myText0"
+<div class="wrap">
+    <!--Updated on 10/8/2016; fixed center alignment percentage-->
+    <div class="fleft">
+        <p> play mastermind game. In the first column of boxes you have to enter numbers from 0 to 7 separated <br>
+            by space in the second column of boxes the first number shows the number of pins with both correct color and
+            <br> correct position  and the second number shows that color is correct but in wrong position </p>
+        <label>Guess:</label>
+        <input type="text"
+               id="myText0"
 
-        />
-</input>
+                />
+        </input>
 
-<input type = "text"
-       id = "result0"
+        <input type="text"
+               id="result0"
 
-/>
-</input>
+                />
+        </input>
 
-<br>
-<label>Guess:</label>
-<input type = "text"
-       id = "myText1"
+        <br>
+        <label>Guess:</label>
+        <input type="text"
+               id="myText1"
 
-/>
+                />
 
-<input type = "text"
-       id = "result1"
+        <input type="text"
+               id="result1"
 
-/>
-</input>
-<br>
-<label>Guess:</label>
-</input>
-<input type = "text"
-       id = "myText2"
+                />
+        </input>
+        <br>
+        <label>Guess:</label>
+        </input>
+        <input type="text"
+               id="myText2"
 
-/>
+                />
 
-</input>
+        </input>
 
-<input type = "text"
-       id = "result2"
+        <input type="text"
+               id="result2"
 
-/>
-</input>
-<br>
-<label>Guess:</label>
-</input>
-<input type = "text"
-       id = "myText3"
+                />
+        </input>
+        <br>
+        <label>Guess:</label>
+        </input>
+        <input type="text"
+               id="myText3"
 
-/>
+                />
 
-</input>
+        </input>
 
-<input type = "text"
-       id = "result3"
+        <input type="text"
+               id="result3"
 
-/>
+                />
 
-</input>
-<br>
-<label>Guess:</label>
-</input>
-<input type = "text"
-       id = "myText4"
+        </input>
+        <br>
+        <label>Guess:</label>
+        </input>
+        <input type="text"
+               id="myText4"
 
-/>
+                />
 
-</input>
+        </input>
 
-<input type = "text"
-       id = "result4"
+        <input type="text"
+               id="result4"
 
-/>
-</input>
-<br>
-<label>Guess:</label>
-</input>
-<input type = "text"
-       id = "myText5"
+                />
+        </input>
+        <br>
+        <label>Guess:</label>
+        </input>
+        <input type="text"
+               id="myText5"
 
-/>
+                />
 
-</input>
+        </input>
 
-<input type = "text"
-       id = "result5"
+        <input type="text"
+               id="result5"
 
-/>
-<br>
-</input>
-<label>Guess:</label>
-</input>
-<input type = "text"
-       id = "myText6"
+                />
+        <br>
+        </input>
+        <label>Guess:</label>
+        </input>
+        <input type="text"
+               id="myText6"
 
-/>
+                />
 
-</input>
+        </input>
 
-<input type = "text"
-       id = "result6"
+        <input type="text"
+               id="result6"
 
-/>
-</input>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<button type="button" id = "myButton0">Check</button>
+                />
+        </input>
+        <br>
+        <button type="button" id = "myButton0">Check</button>
+    </div>
 
 
+    <div class="board">
 
+        <input type="text"
+               id="colorBox0"
+               size="1"
+               style="background: blue"
+                />
+        </input>
+        <label class="data-source">0</label>
+        <br>
+        <input type="text"
+               id="colorBox1"
+               size="1"
+               style="background: green"
+                />
+        </input>
+        <label class="data-source">1</label>
+        <br>
+        <input type="text"
+               id="colorBox2"
+               size="1"
+               style="background: orange"
+                />
+        </input>
+        <label class="data-source">2</label>
+        <br>
+        <input type="text"
+               id="colorBox3"
+               size="1"
+               style="background: black"
+                />
+        </input>
+        <label class="data-source">3</label>
+        <br>
+        <input type="text"
+               id="colorBox4"
+               size="1"
+               style="background: yellow"
+                />
+        </input>
+        <label class="data-source">4</label>
+        <br>
+        <input type="text"
+               id="colorBox5"
+               size="1"
+               style="background: red"
+                />
+        </input>
+        <label class="data-source">5</label>
+        <br>
+        <input type="text"
+               id="colorBox6"
+               size="1"
+               style="background: white"
+                />
+        </input>
+        <label class="data-source">6</label>
+        <br>
+        <input type="text"
+               id="colorBox7"
+               size="1"
+               style="background: brown"
+                />
+        </input>
+        <label class="data-source">7</label>
+        <br>
+
+
+
+</div>
+
+</div>
 <script src="mastermind.js"></script>
-
 </body>
 </html>

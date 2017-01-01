@@ -16,7 +16,8 @@ $("#myButton0").click(function () {
 
     var ints = giveFeedback(targetRow, userRow);
     var id = '#result'.concat(String(count));
-    $(id).val(String(ints[0]).concat(" ").concat(ints[1]) );
+    $(id).val(String("black:" + ints[0]).concat(" ").concat("white:" + ints[1]) );
+   // $(id).css({"background-color":"#0"});
     // document.write("black:" + ints[0] + " ");
     // document.write("white:" + ints[1] + '<br>');
 
@@ -26,7 +27,7 @@ $("#myButton0").click(function () {
 
 //        }
     console.log(count)
-    if (count == 3) {
+    if (count == 6) {
 
         for (var j = 0; j < targetRow.length; j++) {
             document.write(targetRow[j] + " ");
@@ -89,7 +90,7 @@ function generateRandomRow() {
     while (count < 4) {
 
 
-        targetRow[count] = Math.floor(Math.random() * 6);
+        targetRow[count] = Math.floor(Math.random() * 8);
         count++;
     }
 
