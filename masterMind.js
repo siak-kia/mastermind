@@ -8,20 +8,34 @@
 var targetRow = generateRandomRow();
 // main program
 var count = 0;
-
+var shown  = 0;
 
 $("#myButton0").click(function () {
 
     var userRow = getInput(count);
 
-    var ints = giveFeedback(targetRow, userRow);
-    var id = '#result'.concat(String(count));
-    $(id).val(String("black:" + ints[0]).concat(" ").concat("white:" + ints[1]) );
-   // $(id).css({"background-color":"#0"});
-    // document.write("black:" + ints[0] + " ");
-    // document.write("white:" + ints[1] + '<br>');
+    var feedbacks = giveFeedback(targetRow, userRow);
 
-    if (ints[0] == 4) {
+    var id="";
+    for (var i =0; i < feedbacks[0] ; i++){
+        id = '#result'.concat(String(count)+ shown);
+        $(id).css({"background-color":"black"});
+        shown++;
+    }
+
+    for (var k =0; k < feedbacks[1] ; k++){
+        id = '#result'.concat(String(count)+ shown);
+        $(id).css({"background-color":"white"});
+        shown++;
+    }
+
+
+    //$(id).val(String("black:" + feedbacks[0]).concat(" ").concat("white:" + feedbacks[1]) );
+
+    // document.write("black:" + feedbacks[0] + " ");
+    // document.write("white:" + feedbacks[1] + '<br>');
+
+    if (feedbacks[0] == 4) {
         document.write("you are the winner" + '<br>');
     }
 
@@ -34,6 +48,7 @@ $("#myButton0").click(function () {
         }
     }
     count++;
+    shown =0;
 });
 
 
@@ -47,12 +62,12 @@ function main() {
         // document.write("getInput is done.");
         //showArray(userRow);
 
-        // var ints = giveFeedback(targetRow, userRow);
+        // var feedbacks = giveFeedback(targetRow, userRow);
 
-        // document.write("black:" + ints[0] + " ");
-        // document.write("white:" + ints[1] + '<br>');
+        // document.write("black:" + feedbacks[0] + " ");
+        // document.write("white:" + feedbacks[1] + '<br>');
         document.write($('#myText').val());
-//         if (ints[0] == 4){
+//         if (feedbacks[0] == 4){
 //             document.write("you are winner" + '<br>');
 //         }
 //         count++;

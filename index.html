@@ -7,10 +7,18 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <div class="wrap">
     <!--Updated on 10/8/2016; fixed center alignment percentage-->
+    <div class="paragraph">
+        <p> <b> Mastermind Game</b></p>
+        <p> How to play mastermind: The computer selects the pattern of 4 colors( for example 1 3 4 5). you have to guess the pattern
+            with the hints you are given in each move. In the first column of boxes you have to enter numbers from 0 to 7 separated
+            by space and then press Check button,  the number of black rectangles shows the number of digits with  correct color and
+            AND correct position  and white rectangles shows the number of digits which are correct but in wrong position
+            for example if you enter 1 2 3 4 and target is 1 2 4 7 two black rectangles are shown for 1 and 2 and 1 white
+            rectangle is shown for 4.
+        </p>
+    </div>
     <div class="fleft">
-        <p> play mastermind game. In the first column of boxes you have to enter numbers from 0 to 7 separated <br>
-            by space in the second column of boxes the first number shows the number of pins with both correct color and
-            <br> correct position  and the second number shows that color is correct but in wrong position </p>
+
         <label>Guess:</label>
         <input type="text"
                id="myText0"
@@ -19,8 +27,27 @@
         </input>
 
         <input type="text"
-               id="result0"
-
+               id="result00"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result01"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result02"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result03"
+               size="1"
+               style="background-color: darkgrey"
                 />
         </input>
 
@@ -32,8 +59,27 @@
                 />
 
         <input type="text"
-               id="result1"
-
+               id="result10"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result11"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result12"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result13"
+               size="1"
+               style="background-color: darkgrey"
                 />
         </input>
         <br>
@@ -47,10 +93,28 @@
         </input>
 
         <input type="text"
-               id="result2"
-
+               id="result20"
+               size="1"
+               style="background-color: darkgrey"
                 />
         </input>
+        <input type="text"
+               id="result21"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result22"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result23"
+               size="1"
+               style="background-color: darkgrey"
+                />
         <br>
         <label>Guess:</label>
         </input>
@@ -62,11 +126,28 @@
         </input>
 
         <input type="text"
-               id="result3"
-
+               id="result30"
+               size="1"
+               style="background-color: darkgrey"
                 />
-
         </input>
+        <input type="text"
+               id="result31"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result32"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result33"
+               size="1"
+               style="background-color: darkgrey"
+                />
         <br>
         <label>Guess:</label>
         </input>
@@ -78,10 +159,28 @@
         </input>
 
         <input type="text"
-               id="result4"
-
+               id="result40"
+               size="1"
+               style="background-color: darkgrey"
                 />
         </input>
+        <input type="text"
+               id="result41"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result42"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result43"
+               size="1"
+               style="background-color: darkgrey"
+                />
         <br>
         <label>Guess:</label>
         </input>
@@ -93,8 +192,27 @@
         </input>
 
         <input type="text"
-               id="result5"
-
+               id="result50"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result51"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result52"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result53"
+               size="1"
+               style="background-color: darkgrey"
                 />
         <br>
         </input>
@@ -108,12 +226,31 @@
         </input>
 
         <input type="text"
-               id="result6"
-
+               id="result60"
+               size="1"
+               style="background-color: darkgrey"
                 />
         </input>
+        <input type="text"
+               id="result61"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result62"
+               size="1"
+               style="background-color: darkgrey"
+                />
+        </input>
+        <input type="text"
+               id="result63"
+               size="1"
+               style="background-color: darkgrey"
+                />
         <br>
-        <button type="button" id = "myButton0">Check</button>
+        <br>
+        <button type="button" id = "myButton0" aria-setsize="2">Check</button>
     </div>
 
 
@@ -121,67 +258,67 @@
 
         <input type="text"
                id="colorBox0"
-               size="1"
+               size="2"
                style="background: blue"
                 />
         </input>
-        <label class="data-source">0</label>
+        <label class="data-source">: 0</label>
         <br>
         <input type="text"
                id="colorBox1"
-               size="1"
+               size="2"
                style="background: green"
                 />
         </input>
-        <label class="data-source">1</label>
+        <label class="data-source">: 1</label>
         <br>
         <input type="text"
                id="colorBox2"
-               size="1"
+               size="2"
                style="background: orange"
                 />
         </input>
-        <label class="data-source">2</label>
+        <label class="data-source">: 2</label>
         <br>
         <input type="text"
                id="colorBox3"
-               size="1"
+               size="2"
                style="background: black"
                 />
         </input>
-        <label class="data-source">3</label>
+        <label class="data-source">: 3</label>
         <br>
         <input type="text"
                id="colorBox4"
-               size="1"
+               size="2"
                style="background: yellow"
                 />
         </input>
-        <label class="data-source">4</label>
+        <label class="data-source">:4</label>
         <br>
         <input type="text"
                id="colorBox5"
-               size="1"
+               size="2"
                style="background: red"
                 />
         </input>
-        <label class="data-source">5</label>
+        <label class="data-source">:5</label>
         <br>
         <input type="text"
                id="colorBox6"
-               size="1"
+               size="2"
                style="background: white"
                 />
         </input>
-        <label class="data-source">6</label>
+        <label class="data-source">: 6</label>
         <br>
         <input type="text"
                id="colorBox7"
-               size="1"
+               size="2"
                style="background: brown"
                 />
         </input>
-        <label class="data-source">7</label>
+        <label class="data-source">: 7</label>
         <br>
 
 
