@@ -40,12 +40,14 @@ $("#myButton0").click(function () {
     }
 
 //        }
+    var correctAnswer = "";
     console.log(count)
     if (count == 6) {
 
         for (var j = 0; j < targetRow.length; j++) {
-            document.write(targetRow[j] + " ");
+             correctAnswer = correctAnswer + targetRow[j] + " ";
         }
+        prompt("the correct answer is"  + correctAnswer);
     }
     count++;
     shown =0;
